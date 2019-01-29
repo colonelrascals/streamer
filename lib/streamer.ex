@@ -4,13 +4,7 @@ defmodule Streamer do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Streamer.hello()
-      :world
-
+  Find index file of .m3u8 file
   """
   def find_index(dir) do
     files = Path.join(dir, "*.m3u8")
@@ -18,10 +12,10 @@ defmodule Streamer do
       is_index?(file)
   end
 
-  def is_index(file) do
-      File.open file, fn
-        "#EXTM3U\n#EXT-X-STREAM-INF" <> _ -> true
-        _ -> false
-     end
+  defp is_index(file) do
+      File.open! file, fn(pid)
+      IO.read(file, 25) == "#EXTM3U\n#EXT-X-STREAM-INF"
+
+    end
   end
 end

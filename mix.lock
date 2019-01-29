@@ -1,0 +1,4 @@
+%{
+  "dogma": {:hex, :dogma, "0.1.16", "3c1532e2f63ece4813fe900a16704b8e33264da35fdb0d8a1d05090a3022eef9", [:mix], [{:poison, ">= 2.0.0", [hex: :poison, repo: "hexpm", optional: false]}], "hexpm"},
+  "poison": {:hex, :poison, "4.0.1", "bcb755a16fac91cad79bfe9fc3585bb07b9331e50cfe3420a24bcc2d735709ae", [:mix], [], "hexpm"},
+}
