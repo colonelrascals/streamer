@@ -4,4 +4,5 @@ defmodule StreamerTest do
 
   test "find the index file in a directory" do
     assert Streamer.find_index('path/to/dir')
-  endi
+  end
+end
